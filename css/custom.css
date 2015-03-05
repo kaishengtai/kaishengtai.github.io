@@ -1,0 +1,29 @@
+img {
+    max-width: 100%;
+    max-height: auto;
+}
+
+.smallskip {
+    height: 5px;
+}
+
+.medskip {
+    height: 10px;
+}
+
+.bigskip {
+    height: 20px;
+}
+
+.info-panel + .info-panel {
+    display: inline-block;
+    margin-top: 5px;
+}
+
+.footer {
+    text-align: right;
+    font-size: 8pt;
+    margin-top: 50px;
+    position: absolute;
+    bottom: 12px;
+}
