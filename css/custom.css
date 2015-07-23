@@ -15,9 +15,10 @@ img {
     height: 20px;
 }
 
-.info-panel + .info-panel {
+.info-panel {
     display: inline-block;
     margin-top: 5px;
+    width: 500px;
 }
 
 .footer {
