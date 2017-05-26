@@ -1,5 +1,5 @@
 img {
-    max-width: 100%;
+    max-width: 150px;
     max-height: auto;
 }
 
@@ -17,15 +17,28 @@ img {
 
 .info-panel {
     display: inline-block;
-    margin-top: 5px;
-    width: 600px;
+    margin-top: 10px;
+    max-width: 600px;
     font-size: 11pt;
 }
 
+.container {
+    display: block;
+    min-height: 100%;
+    position: relative;
+}
+
+.info {
+    padding-bottom: 80px;
+    min-height: 100%;
+}
+
 .footer {
-    text-align: right;
+    width: 100%;
+    margin-top: -80px;
+    padding-top: 60px;
+    height: 100px;
+    text-align: left;
     font-size: 8pt;
-    margin-top: 50px;
-    position: absolute;
-    bottom: 12px;
+    bottom: 0px;
 }
