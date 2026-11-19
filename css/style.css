@@ -124,6 +124,7 @@ h1, h2, h3 { text-wrap: balance; }
 .pub-authors strong { color: var(--text); font-weight: 600; }
 .pub-note { color: var(--muted); font-style: italic; }
 .pub-venue { font-style: italic; margin-top: 2px; }
+.pub-blurb { font-size: 14px; margin: 6px 0 0; }
 .badge {
   display: inline-block;
   margin-left: 6px;
