@@ -7,7 +7,11 @@
     <meta name="description" content="Kai Sheng Tai is an AI researcher working on efficient neural network architectures and training methods. Member of Technical Staff at Abridge; previously Meta and Stanford.">
     <meta name="color-scheme" content="light dark">
     <link rel="canonical" href="https://kaishengtai.github.io/">
-    <link rel="icon" href="static/favicon.ico">
+    <link rel="icon" href="static/icon.svg" type="image/svg+xml">
+    <link rel="icon" href="static/icon-32.png" type="image/png" sizes="32x32">
+    <link rel="apple-touch-icon" href="static/apple-touch-icon.png">
+    <meta name="theme-color" content="#fbf9f5" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#23211e" media="(prefers-color-scheme: dark)">
     <link rel="stylesheet" href="css/style.css">
 
     <!-- Google tag (gtag.js) -->
@@ -53,9 +57,9 @@
           <p class="contact"><a href="mailto:kst@cs.stanford.edu">kst@cs.stanford.edu</a></p>
           <ul class="links">
             <li><a href="static/KaiShengTai_CV.pdf">CV</a></li>
-            <li><a href="https://scholar.google.com/citations?user=AMwvwPYAAAAJ&amp;hl=en">Google Scholar</a></li>
-            <li><a href="https://github.com/kaishengtai">GitHub</a></li>
-            <li><a href="https://www.linkedin.com/in/kaishengtai">LinkedIn</a></li>
+            <li><a rel="me" href="https://scholar.google.com/citations?user=AMwvwPYAAAAJ&amp;hl=en">Google Scholar</a></li>
+            <li><a rel="me" href="https://github.com/kaishengtai">GitHub</a></li>
+            <li><a rel="me" href="https://www.linkedin.com/in/kaishengtai">LinkedIn</a></li>
           </ul>
         </div>
       </aside>
@@ -106,8 +110,8 @@
               <p class="pub-authors">Hanqing Zhu, Zhenyu Zhang, Hanxian Huang, DiJia Su, Zechun Liu, Jiawei Zhao, Igor Fedorov, Hamed Pirsiavash, Zhizhou Sha, Jinwon Lee, David Z. Pan, Zhangyang Wang, Yuandong Tian, and <strong>Kai Sheng Tai</strong></p>
               <p class="pub-venue">NeurIPS 2026</p>
               <p class="pub-links">
-                <button type="button" class="toggle" aria-expanded="false" aria-controls="rlvr-abs">abstract</button>
-                <button type="button" class="toggle" aria-expanded="false" aria-controls="rlvr-bib">bibtex</button>
+                <button type="button" class="toggle" aria-expanded="false" aria-controls="rlvr-abs"><span class="caret" aria-hidden="true"></span>abstract</button>
+                <button type="button" class="toggle" aria-expanded="false" aria-controls="rlvr-bib"><span class="caret" aria-hidden="true"></span>bibtex</button>
               </p>
               <div class="pub-panel" id="rlvr-abs" hidden>
                 <p>Reinforcement Learning with Verifiable Rewards (RLVR) reliably improves the reasoning performance of large language models, yet it appears to modify only a small fraction of parameters. We revisit this paradox and show that sparsity is a surface artifact of a model-conditioned optimization bias: for a fixed pretrained model, updates consistently localize to preferred parameter regions, highly consistent across runs and largely invariant to datasets and RL recipes. We mechanistically explain these dynamics with a Three-Gate Theory: Gate I (KL Anchor) imposes a KL-constrained update; Gate II (Model Geometry) steers the step off principal directions into low-curvature, spectrum-preserving subspaces; and Gate III (Precision) hides micro-updates in non-preferred regions, making the off-principal bias appear as sparsity. We then validate this theory and, for the first time, provide a parameter-level characterization of RLVR&#x27;s learning dynamics: RLVR learns off principal directions in weight space, achieving gains via minimal spectral drift, reduced principal-subspace rotation, and off-principal update alignment. In contrast, SFT targets principal weights, distorts the spectrum, and even lags RLVR. Together, these results provide the first parameter-space account of RLVR&#x27;s training dynamics, revealing clear regularities in how parameters evolve. Crucially, we show that RL operates in a distinct optimization regime from SFT, so directly adapting SFT-era parameter-efficient fine-tuning (PEFT) methods can be flawed, as evidenced by our case studies on advanced sparse fine-tuning and LoRA variants. We hope this work charts a path toward a white-box understanding of RLVR and the design of geometry-aware, RLVR-native learning algorithms, rather than repurposed SFT-era heuristics.</p>
@@ -132,8 +136,8 @@
               <p class="pub-authors">Patrick Huber, Ernie Chang, Wei Wen, Igor Fedorov, Tarek Elgamal, Hanxian Huang, Naveen Suda, Chinnadhurai Sankar, Vish Vogeti, Yanghan Wang, Alex Gladkov, <strong>Kai Sheng Tai</strong>, Abdelrahman Elogeel, Tarek Hefny, Vikas Chandra, Ahmed Aly, Anuj Kumar, Raghuraman Krishnamoorthi, and Adithya Sagar</p>
               <p class="pub-venue">arXiv 2025</p>
               <p class="pub-links">
-                <button type="button" class="toggle" aria-expanded="false" aria-controls="mobilellm-pro-abs">abstract</button>
-                <button type="button" class="toggle" aria-expanded="false" aria-controls="mobilellm-pro-bib">bibtex</button>
+                <button type="button" class="toggle" aria-expanded="false" aria-controls="mobilellm-pro-abs"><span class="caret" aria-hidden="true"></span>abstract</button>
+                <button type="button" class="toggle" aria-expanded="false" aria-controls="mobilellm-pro-bib"><span class="caret" aria-hidden="true"></span>bibtex</button>
                 <a href="https://huggingface.co/facebook/MobileLLM-Pro">model</a>
               </p>
               <div class="pub-panel" id="mobilellm-pro-abs" hidden>
@@ -157,10 +161,10 @@
             <div class="pub-body">
               <h3 class="pub-title"><a href="https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/09508.pdf">uCAP: An Unsupervised Prompting Method for Vision-Language Models</a></h3>
               <p class="pub-authors">A. Tuan Nguyen, <strong>Kai Sheng Tai</strong>, Sirius Chen, Satya Narayan Shukla, Hanchao Yu, Philip Torr, Taipeng Tian, and Ser-Nam Lim</p>
-              <p class="pub-venue">ECCV 2024 (oral)</p>
+              <p class="pub-venue">ECCV 2024<span class="badge">Oral</span></p>
               <p class="pub-links">
-                <button type="button" class="toggle" aria-expanded="false" aria-controls="ucap-abs">abstract</button>
-                <button type="button" class="toggle" aria-expanded="false" aria-controls="ucap-bib">bibtex</button>
+                <button type="button" class="toggle" aria-expanded="false" aria-controls="ucap-abs"><span class="caret" aria-hidden="true"></span>abstract</button>
+                <button type="button" class="toggle" aria-expanded="false" aria-controls="ucap-bib"><span class="caret" aria-hidden="true"></span>bibtex</button>
               </p>
               <div class="pub-panel" id="ucap-abs" hidden>
                 <p>This paper addresses a significant limitation that prevents Contrastive Language-Image Pretrained Models (CLIP) from achieving optimal performance on downstream image classification tasks. The key problem with CLIP-style zero-shot classification is that it requires domain-specific context in the form of prompts to better align the class descriptions to the downstream data distribution. In particular, prompts for vision-language models are domain-level texts (e.g., “a centered satellite image of ...”) which, together with the class names, are fed into the text encoder to provide more context for the downstream dataset. These prompts are typically manually tuned, which is time consuming and often sub-optimal. To overcome this bottleneck, this paper proposes uCAP, a method to automatically learn domain-specific prompts/contexts using only unlabeled in-domain images. We achieve this by modeling the generation of images given the class names and a domain-specific prompt with an unsupervised likelihood distribution, and then performing inference of the prompts. We validate the proposed method across various models and datasets, showing that uCAP consistently outperforms manually tuned prompts and related baselines on the evaluated datasets: ImageNet, CIFAR-10, CIFAR-100, OxfordPets (up to 2%), SUN397 (up to 5%), and Caltech101 (up to 3%).</p>
@@ -185,8 +189,8 @@
               <p class="pub-authors"><strong>Kai Sheng Tai</strong>, Taipeng Tian, and Ser-Nam Lim</p>
               <p class="pub-venue">NeurIPS 2022</p>
               <p class="pub-links">
-                <button type="button" class="toggle" aria-expanded="false" aria-controls="spartan-abs">abstract</button>
-                <button type="button" class="toggle" aria-expanded="false" aria-controls="spartan-bib">bibtex</button>
+                <button type="button" class="toggle" aria-expanded="false" aria-controls="spartan-abs"><span class="caret" aria-hidden="true"></span>abstract</button>
+                <button type="button" class="toggle" aria-expanded="false" aria-controls="spartan-bib"><span class="caret" aria-hidden="true"></span>bibtex</button>
                 <a href="https://github.com/facebookresearch/spartan">code</a>
               </p>
               <div class="pub-panel" id="spartan-abs" hidden>
@@ -213,8 +217,8 @@
               <p class="pub-note">* Equal contribution</p>
               <p class="pub-venue">Journal of Geophysical Research: Solid Earth, 2022</p>
               <p class="pub-links">
-                <button type="button" class="toggle" aria-expanded="false" aria-controls="eqnet-abs">abstract</button>
-                <button type="button" class="toggle" aria-expanded="false" aria-controls="eqnet-bib">bibtex</button>
+                <button type="button" class="toggle" aria-expanded="false" aria-controls="eqnet-abs"><span class="caret" aria-hidden="true"></span>abstract</button>
+                <button type="button" class="toggle" aria-expanded="false" aria-controls="eqnet-bib"><span class="caret" aria-hidden="true"></span>bibtex</button>
               </p>
               <div class="pub-panel" id="eqnet-abs" hidden>
                 <p>Earthquake monitoring by seismic networks typically involves a workflow consisting of phase detection/picking, association, and location tasks. In recent years, the accuracy of these individual stages has been improved through the use of machine learning techniques. In this study, we introduce a new, end-to-end approach that improves overall earthquake detection accuracy by jointly optimizing each stage of the detection pipeline. We propose a neural network architecture for the task of multi-station processing of seismic waveforms recorded over a seismic network. This end-to-end architecture consists of three sub-networks: a backbone network that extracts features from raw waveforms, a phase picking sub-network that picks P- and S-wave arrivals based on these features, and an event detection sub-network that aggregates the features from multiple stations and detects earthquakes. We use these sub-networks in conjunction with a shift-and-stack module based on back-projection that introduces kinematic constraints on arrival times, allowing the model to generalize to different velocity models and to variable station geometry in seismic networks. We evaluate our proposed method on the STanford EArthquake Dataset (STEAD) and on the 2019 Ridgecrest, CA earthquake sequence. The results demonstrate that our end-to-end approach can effectively pick P- and S-wave arrivals and achieve earthquake detection accuracy rivaling that of other state-of-the-art approaches.</p>
@@ -243,8 +247,8 @@
               <p class="pub-authors"><strong>Kai Sheng Tai</strong>, Peter Bailis, and Gregory Valiant</p>
               <p class="pub-venue">ICML 2021</p>
               <p class="pub-links">
-                <button type="button" class="toggle" aria-expanded="false" aria-controls="sla-abs">abstract</button>
-                <button type="button" class="toggle" aria-expanded="false" aria-controls="sla-bib">bibtex</button>
+                <button type="button" class="toggle" aria-expanded="false" aria-controls="sla-abs"><span class="caret" aria-hidden="true"></span>abstract</button>
+                <button type="button" class="toggle" aria-expanded="false" aria-controls="sla-bib"><span class="caret" aria-hidden="true"></span>bibtex</button>
                 <a href="https://github.com/stanford-futuredata/sinkhorn-label-allocation">code</a>
               </p>
               <div class="pub-panel" id="sla-abs" hidden>
@@ -270,8 +274,8 @@
               <p class="pub-authors"><strong>Kai Sheng Tai</strong>, Peter Bailis, and Gregory Valiant</p>
               <p class="pub-venue">ICML 2019</p>
               <p class="pub-links">
-                <button type="button" class="toggle" aria-expanded="false" aria-controls="etn-abs">abstract</button>
-                <button type="button" class="toggle" aria-expanded="false" aria-controls="etn-bib">bibtex</button>
+                <button type="button" class="toggle" aria-expanded="false" aria-controls="etn-abs"><span class="caret" aria-hidden="true"></span>abstract</button>
+                <button type="button" class="toggle" aria-expanded="false" aria-controls="etn-bib"><span class="caret" aria-hidden="true"></span>bibtex</button>
                 <a href="https://github.com/stanford-futuredata/equivariant-transformers">code</a>
               </p>
               <div class="pub-panel" id="etn-abs" hidden>
@@ -298,8 +302,8 @@
               <p class="pub-note">* Equal contribution</p>
               <p class="pub-venue">ICML 2019</p>
               <p class="pub-links">
-                <button type="button" class="toggle" aria-expanded="false" aria-controls="compressed-factorization-abs">abstract</button>
-                <button type="button" class="toggle" aria-expanded="false" aria-controls="compressed-factorization-bib">bibtex</button>
+                <button type="button" class="toggle" aria-expanded="false" aria-controls="compressed-factorization-abs"><span class="caret" aria-hidden="true"></span>abstract</button>
+                <button type="button" class="toggle" aria-expanded="false" aria-controls="compressed-factorization-bib"><span class="caret" aria-hidden="true"></span>bibtex</button>
                 <a href="https://github.com/kaishengtai/compressed-factorization">code</a>
               </p>
               <div class="pub-panel" id="compressed-factorization-abs" hidden>
@@ -325,8 +329,8 @@
               <p class="pub-authors">Edward Gan, Jialin Ding, <strong>Kai Sheng Tai</strong>, Vatsal Sharan, and Peter Bailis</p>
               <p class="pub-venue">VLDB 2018</p>
               <p class="pub-links">
-                <button type="button" class="toggle" aria-expanded="false" aria-controls="msketch-abs">abstract</button>
-                <button type="button" class="toggle" aria-expanded="false" aria-controls="msketch-bib">bibtex</button>
+                <button type="button" class="toggle" aria-expanded="false" aria-controls="msketch-abs"><span class="caret" aria-hidden="true"></span>abstract</button>
+                <button type="button" class="toggle" aria-expanded="false" aria-controls="msketch-bib"><span class="caret" aria-hidden="true"></span>bibtex</button>
                 <a href="https://github.com/stanford-futuredata/msketch">code</a>
               </p>
               <div class="pub-panel" id="msketch-abs" hidden>
@@ -355,8 +359,8 @@
               <p class="pub-authors"><strong>Kai Sheng Tai</strong>, Vatsal Sharan, Peter Bailis, and Gregory Valiant</p>
               <p class="pub-venue">SIGMOD 2018</p>
               <p class="pub-links">
-                <button type="button" class="toggle" aria-expanded="false" aria-controls="wmsketch-abs">abstract</button>
-                <button type="button" class="toggle" aria-expanded="false" aria-controls="wmsketch-bib">bibtex</button>
+                <button type="button" class="toggle" aria-expanded="false" aria-controls="wmsketch-abs"><span class="caret" aria-hidden="true"></span>abstract</button>
+                <button type="button" class="toggle" aria-expanded="false" aria-controls="wmsketch-bib"><span class="caret" aria-hidden="true"></span>bibtex</button>
                 <a href="https://github.com/stanford-futuredata/wmsketch">code</a>
                 <a href="https://mlsys.org/Conferences/2019/doc/2018/205.pdf">extended abstract</a>
                 <a href="https://arxiv.org/abs/1711.02305">long version</a>
@@ -387,8 +391,8 @@
               <p class="pub-authors"><strong>Kai Sheng Tai</strong>, Richard Socher, and Christopher D. Manning</p>
               <p class="pub-venue">ACL 2015</p>
               <p class="pub-links">
-                <button type="button" class="toggle" aria-expanded="false" aria-controls="treelstm-abs">abstract</button>
-                <button type="button" class="toggle" aria-expanded="false" aria-controls="treelstm-bib">bibtex</button>
+                <button type="button" class="toggle" aria-expanded="false" aria-controls="treelstm-abs"><span class="caret" aria-hidden="true"></span>abstract</button>
+                <button type="button" class="toggle" aria-expanded="false" aria-controls="treelstm-bib"><span class="caret" aria-hidden="true"></span>bibtex</button>
                 <a href="https://github.com/stanfordnlp/treelstm">code</a>
                 <a href="static/slides/treelstm-acl2015.pdf">slides</a>
               </p>
@@ -420,6 +424,9 @@
             <li><a href="https://github.com/kaishengtai/torch-ntm">torch-ntm</a> <span class="year">(2015)</span>: A <a href="https://arxiv.org/abs/1410.5401">Neural Turing Machine</a> implementation using LuaTorch.</li>
           </ul>
         </section>
+        <footer class="site-footer">
+          <p>&copy; 2026 Kai Sheng Tai &middot; Last updated November 2026</p>
+        </footer>
       </main>
     </div>
 
@@ -439,11 +446,25 @@
             document.getElementById(btn.getAttribute('aria-controls')).hidden = false;
           }
         } else if (btn.classList.contains('copy')) {
-          var text = btn.nextElementSibling.textContent;
-          navigator.clipboard.writeText(text).then(function () {
-            btn.textContent = 'Copied';
+          var pre = btn.nextElementSibling;
+          var flash = function (label) {
+            btn.textContent = label;
             setTimeout(function () { btn.textContent = 'Copy'; }, 1500);
-          });
+          };
+          // If clipboard access is unavailable, select the text so it can be copied by hand.
+          var selectText = function () {
+            var range = document.createRange();
+            range.selectNodeContents(pre);
+            var sel = window.getSelection();
+            sel.removeAllRanges();
+            sel.addRange(range);
+            flash('Selected');
+          };
+          if (navigator.clipboard && window.isSecureContext) {
+            navigator.clipboard.writeText(pre.textContent).then(function () { flash('Copied'); }, selectText);
+          } else {
+            selectText();
+          }
         }
       });
     </script>
