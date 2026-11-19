@@ -2,181 +2,441 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Kai Sheng Tai</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Kai Sheng Tai's personal site" />
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/custom.css" />
+    <meta name="description" content="Kai Sheng Tai is an AI researcher working on efficient neural network architectures and training methods. Member of Technical Staff at Abridge; previously Meta and Stanford.">
+    <meta name="color-scheme" content="light dark">
+    <link rel="canonical" href="https://kaishengtai.github.io/">
+    <link rel="icon" href="static/favicon.ico">
+    <link rel="stylesheet" href="css/style.css">
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-60404906-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+    <meta property="og:type" content="profile">
+    <meta property="og:title" content="Kai Sheng Tai">
+    <meta property="og:description" content="AI researcher working on efficient neural network architectures and training methods.">
+    <meta property="og:url" content="https://kaishengtai.github.io/">
+    <meta property="og:image" content="https://kaishengtai.github.io/static/kaishengtai.jpg">
+    <meta name="twitter:card" content="summary">
 
-      gtag('config', 'UA-60404906-1');
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Kai Sheng Tai",
+      "url": "https://kaishengtai.github.io/",
+      "image": "https://kaishengtai.github.io/static/kaishengtai.jpg",
+      "jobTitle": "Member of Technical Staff",
+      "worksFor": {"@type": "Organization", "name": "Abridge"},
+      "alumniOf": {"@type": "CollegeOrUniversity", "name": "Stanford University"},
+      "sameAs": [
+        "https://github.com/kaishengtai",
+        "https://scholar.google.com/citations?user=AMwvwPYAAAAJ",
+        "https://www.linkedin.com/in/kaishengtai"
+      ]
+    }
     </script>
   </head>
   <body>
-
-    <nav class="navbar navbar-default">
-      <div class="container">
-        <div class="navbar-header">
-          <a class="navbar-brand" href="/">Kai Sheng Tai</a>
+    <div class="page">
+      <aside class="sidebar">
+        <img class="photo" src="static/kaishengtai.webp" width="160" height="160" alt="Portrait of Kai Sheng Tai">
+        <div class="sidebar-text">
+          <h1 class="name">Kai Sheng Tai</h1>
+          <p class="contact"><a href="mailto:kst@cs.stanford.edu">kst@cs.stanford.edu</a></p>
+          <ul class="links">
+            <li><a href="static/KaiShengTai_CV.pdf">CV</a></li>
+            <li><a href="https://scholar.google.com/citations?user=AMwvwPYAAAAJ&amp;hl=en">Google Scholar</a></li>
+            <li><a href="https://github.com/kaishengtai">GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/kaishengtai">LinkedIn</a></li>
+          </ul>
         </div>
-      </div>
-    </nav>
+      </aside>
 
-    <div class="container">
-      <div class="row main">
-        <div class="col-md-2">
-          <div class="bigskip"></div>
-          <img src="static/kaishengtai.jpg" alt="Kai Sheng Tai" />
+      <main>
+        <section id="about">
+          <h2>About</h2>
+          <p>
+            I am an AI researcher working on efficient neural network architectures and training methods.
+            I am currently a Member of Technical Staff at <a href="https://www.abridge.com/">Abridge</a>.
+            Previously, I was a Research Scientist at Meta, where I worked on developing on-device LLMs and was
+            technical lead on pretraining text encoder foundation models for recommendation and retrieval systems.
+          </p>
+          <p>
+            My research has explored ways to leverage structure and invariances in data to build more efficient and effective machine learning models:
+            for instance, by exploiting the structure of language with <a href="#treelstm">Tree-LSTMs</a>,
+            the various symmetries in images with <a href="#etn">Equivariant Transformers</a>,
+            and the underlying physical constraints of the Earth for <a href="#eqnet">ML-driven earthquake detection methods</a>.
+          </p>
+          <p>
+            I hold a Ph.D. in Computer Science from <a href="https://cs.stanford.edu/">Stanford University</a>,
+            where I was advised by <a href="https://www.bailis.org/">Peter Bailis</a> and
+            <a href="https://theory.stanford.edu/~valiant/">Gregory Valiant</a>. While at Stanford, I was a member of
+            the <a href="https://github.com/stanford-futuredata">Future Data Systems</a> group and the
+            <a href="https://dawn.cs.stanford.edu/">DAWN</a> project.
+            During my time as an MS student, I was also affiliated with the <a href="https://nlp.stanford.edu/">Stanford NLP Group</a>.
+          </p>
+        </section>
 
-          <div class="bigskip"></div>
+        <section id="news">
+          <h2>News</h2>
+          <ul class="news">
+            <li><span class="news-date">2026</span> <span>Joined <a href="https://www.abridge.com/">Abridge</a> as a Member of Technical Staff.</span></li>
+            <li><span class="news-date">2026</span> <span><a href="#rlvr"><em>The Path Not Taken: RLVR Provably Learns Off the Principals</em></a> was accepted to NeurIPS 2026.</span></li>
+          </ul>
+        </section>
 
-          <h5>Contact</h5>
-          <p><a href="mailto:kst@cs.stanford.edu">kst@cs.stanford.edu</a></p>
-
-          <div class="smallskip"></div>
-
-          <h5>Links</h5>
-          <p><a href="static/KaiShengTai_CV.pdf" target="_blank">CV</a></p>
-          <p><a href="https://github.com/kaishengtai" target="_blank">GitHub</a></p>
-          <p><a href="https://scholar.google.com/citations?user=AMwvwPYAAAAJ&hl=en" target="_blank">Google Scholar</a></p>
-          <!-- <p><a href="https://twitter.com/kaishengtai" target="_blank">Twitter</a></p> -->
-          <p><a href="https://linkedin.com/in/kaishengtai" target="_blank">LinkedIn</a></p>
-
-        </div>
-        <div class="col-md-7">
-          <div class="info">
-            <div class="info-panel">
-              <h3>About</h3>
-  	          <p>
-                I am an AI researcher working on efficient neural network architectures and training methods.
-                Most recently, I worked at Meta on developing on-device LLMs and as technical lead on pretraining 
-                text encoder foundation models for recommendation and retrieval systems.
+        <section id="publications">
+          <h2>Selected Publications</h2>
+          <p class="section-note">Full list on <a href="https://scholar.google.com/citations?user=AMwvwPYAAAAJ&amp;hl=en">Google Scholar</a>.</p>
+          <ol class="pubs">
+          <li class="pub" id="rlvr">
+            <a class="pub-thumb" href="https://arxiv.org/abs/2511.08567" tabindex="-1" aria-hidden="true">
+              <img src="static/thumbs/rlvr.webp" alt="Illustration contrasting SFT following a fixed route with RL navigating by compass" loading="lazy" decoding="async">
+            </a>
+            <div class="pub-body">
+              <h3 class="pub-title"><a href="https://arxiv.org/abs/2511.08567">The Path Not Taken: RLVR Provably Learns Off the Principals</a></h3>
+              <p class="pub-authors">Hanqing Zhu, Zhenyu Zhang, Hanxian Huang, DiJia Su, Zechun Liu, Jiawei Zhao, Igor Fedorov, Hamed Pirsiavash, Zhizhou Sha, Jinwon Lee, David Z. Pan, Zhangyang Wang, Yuandong Tian, and <strong>Kai Sheng Tai</strong></p>
+              <p class="pub-venue">NeurIPS 2026</p>
+              <p class="pub-links">
+                <button type="button" class="toggle" aria-expanded="false" aria-controls="rlvr-abs">abstract</button>
+                <button type="button" class="toggle" aria-expanded="false" aria-controls="rlvr-bib">bibtex</button>
               </p>
-
-              <p>
-                My research has explored ways to leverage structure and invariances in data to build more efficient and effective machine learning models:
-                for instance, by exploiting the structure of language with <a href="//www.aclweb.org/anthology/P/P15/P15-1150.pdf" target="_blank">Tree-LSTMs</a>, 
-                the various symmetries in images with <a href="https://arxiv.org/abs/1901.11399" target="_blank">Equivariant Transformers</a>, 
-                and the underlying physical constraints of the Earth for <a href="https://arxiv.org/abs/2109.09911" target="_blank">ML-driven earthquake detection methods</a>.
-              </p>
-
-              <p>
-                I hold a Ph.D. in Computer Science from <a href="http://cs.stanford.edu/">Stanford University</a>,
-                where I was advised by <a href="http://www.bailis.org/">Peter Bailis</a> and 
-                <a href="http://theory.stanford.edu/~valiant/">Gregory Valiant</a>. While at Stanford, I was a member of 
-                the <a href="https://futuredata.stanford.edu/">Future Data Systems</a> group and the 
-                <a href="https://dawn.cs.stanford.edu/">DAWN</a> project. 
-                During my time as an MS student, I was also affiliated with the <a href="https://nlp.stanford.edu/">Stanford NLP Group</a>.
-              </p>
+              <div class="pub-panel" id="rlvr-abs" hidden>
+                <p>Reinforcement Learning with Verifiable Rewards (RLVR) reliably improves the reasoning performance of large language models, yet it appears to modify only a small fraction of parameters. We revisit this paradox and show that sparsity is a surface artifact of a model-conditioned optimization bias: for a fixed pretrained model, updates consistently localize to preferred parameter regions, highly consistent across runs and largely invariant to datasets and RL recipes. We mechanistically explain these dynamics with a Three-Gate Theory: Gate I (KL Anchor) imposes a KL-constrained update; Gate II (Model Geometry) steers the step off principal directions into low-curvature, spectrum-preserving subspaces; and Gate III (Precision) hides micro-updates in non-preferred regions, making the off-principal bias appear as sparsity. We then validate this theory and, for the first time, provide a parameter-level characterization of RLVR&#x27;s learning dynamics: RLVR learns off principal directions in weight space, achieving gains via minimal spectral drift, reduced principal-subspace rotation, and off-principal update alignment. In contrast, SFT targets principal weights, distorts the spectrum, and even lags RLVR. Together, these results provide the first parameter-space account of RLVR&#x27;s training dynamics, revealing clear regularities in how parameters evolve. Crucially, we show that RL operates in a distinct optimization regime from SFT, so directly adapting SFT-era parameter-efficient fine-tuning (PEFT) methods can be flawed, as evidenced by our case studies on advanced sparse fine-tuning and LoRA variants. We hope this work charts a path toward a white-box understanding of RLVR and the design of geometry-aware, RLVR-native learning algorithms, rather than repurposed SFT-era heuristics.</p>
+              </div>
+              <div class="pub-panel pub-bib" id="rlvr-bib" hidden>
+                <button type="button" class="copy">Copy</button>
+                <pre>@inproceedings{zhu2026path,
+  title     = {The Path Not Taken: {RLVR} Provably Learns Off the Principals},
+  author    = {Zhu, Hanqing and Zhang, Zhenyu and Huang, Hanxian and Su, DiJia and Liu, Zechun and Zhao, Jiawei and Fedorov, Igor and Pirsiavash, Hamed and Sha, Zhizhou and Lee, Jinwon and Pan, David Z. and Wang, Zhangyang and Tian, Yuandong and Tai, Kai Sheng},
+  booktitle = {Advances in Neural Information Processing Systems},
+  year      = {2026}
+}</pre>
+              </div>
             </div>
-
-            <div class="info-panel">
-              <h3>Selected Publications</h3>
-
-              <p>
-                <a href="https://arxiv.org/abs/2511.08567" target="_blank">The Path Not Taken: RLVR Provably Learns Off the Principals</a><br />
-                Hanqing Zhu, Zhenyu Zhang, Hanxian Huang, DiJia Su, Zechun Liu, Jiawei Zhao, Igor Fedorov, Hamed Pirsiavash, Zhizhou Sha, Jinwon Lee, David Z Pan, Zhangyang Wang, Yuandong Tian, and <strong>Kai Sheng Tai</strong><br />
-                arXiv 2025 <br />
+          </li>
+          <li class="pub" id="mobilellm-pro">
+            <a class="pub-thumb" href="https://arxiv.org/abs/2511.06719" tabindex="-1" aria-hidden="true">
+              <img src="static/thumbs/mobilellm-pro.webp" alt="Radar chart of capability scores across data-mixture ablations" loading="lazy" decoding="async">
+            </a>
+            <div class="pub-body">
+              <h3 class="pub-title"><a href="https://arxiv.org/abs/2511.06719">MobileLLM-Pro Technical Report</a></h3>
+              <p class="pub-authors">Patrick Huber, Ernie Chang, Wei Wen, Igor Fedorov, Tarek Elgamal, Hanxian Huang, Naveen Suda, Chinnadhurai Sankar, Vish Vogeti, Yanghan Wang, Alex Gladkov, <strong>Kai Sheng Tai</strong>, Abdelrahman Elogeel, Tarek Hefny, Vikas Chandra, Ahmed Aly, Anuj Kumar, Raghuraman Krishnamoorthi, and Adithya Sagar</p>
+              <p class="pub-venue">arXiv 2025</p>
+              <p class="pub-links">
+                <button type="button" class="toggle" aria-expanded="false" aria-controls="mobilellm-pro-abs">abstract</button>
+                <button type="button" class="toggle" aria-expanded="false" aria-controls="mobilellm-pro-bib">bibtex</button>
+                <a href="https://huggingface.co/facebook/MobileLLM-Pro">model</a>
               </p>
-                
-              <p>
-                <a href="https://arxiv.org/abs/2511.06719" target="_blank">MobileLLM-Pro Technical Report</a><br />
-                Patrick Huber, Ernie Chang, Wei Wen, Igor Fedorov, Tarek Elgamal, Hanxian Huang, Naveen Suda, Chinnadhurai Sankar, Vish Vogeti, Yanghan Wang, Alex Gladkov, <strong>Kai Sheng Tai</strong>, Abdelrahman Elogeel, Tarek Hefny, Vikas Chandra, Ahmed Aly, Anuj Kumar, Raghuraman Krishnamoorthi, and Adithya Sagar<br />
-                arXiv 2025 <br />
-                <a href="https://huggingface.co/facebook/MobileLLM-Pro" target="_blank">[model]</a>
-              </p>
-
-              <p>
-                <a href="https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/09508.pdf" target="_blank">uCAP: An Unsupervised Prompting Method for Vision-Language Models</a><br />
-                A. Tuan Nguyen, <strong>Kai Sheng Tai</strong>, Sirius Chen, Satya Narayan Shukla, Hanchao Yu, Philip Torr, Taipeng Tian, and Ser-Nam Lim<br />
-                ECCV 2024 (oral)<br />
-              </p>
-
-              <p>
-                <a href="https://arxiv.org/abs/2205.14107" target="_blank">Spartan: Differentiable Sparsity via Regularized Transportation</a><br />
-                <strong>Kai Sheng Tai</strong>, Taipeng Tian, and Ser-Nam Lim<br />
-                NeurIPS 2022<br />
-                <a href="https://github.com/facebookresearch/spartan" target="_blank">[code]</a>
-              </p>
-
-              <p>
-                <a href="https://arxiv.org/abs/2109.09911" target="_blank">An End-to-End Earthquake Monitoring Method for Joint Earthquake Detection and Association using Deep Learning</a><br />
-                Weiqiang Zhu*, <strong>Kai Sheng Tai*</strong>, S. Mostafa Mousavi, Peter Bailis, Gregory C. Beroza<br />
-                <em>* Equal contribution</em><br />
-                Journal of Geophysical Research: Solid Earth, 2022<br />
-              </p>
-
-              <p>
-                <a href="https://arxiv.org/abs/2102.08622" target="_blank">Sinkhorn Label Allocation: Semi-Supervised Classification via Annealed Self-Training</a><br />
-                <strong>Kai Sheng Tai</strong>, Peter Bailis, and Gregory Valiant<br />
-                ICML 2021<br />
-                <a href="https://github.com/stanford-futuredata/sinkhorn-label-allocation" target="_blank">[code]</a>
-              </p>
-
-              <p>
-                <a href="https://arxiv.org/abs/1901.11399" target="_blank">Equivariant Transformer Networks</a><br />
-                <strong>Kai Sheng Tai</strong>, Peter Bailis, and Gregory Valiant<br />
-                ICML 2019<br />
-                <a href="https://github.com/stanford-futuredata/equivariant-transformers" target="_blank">[code]</a>
-              </p>
-
-              <p>
-                <a href="https://arxiv.org/abs/1706.08146" target="_blank">Compressed Factorization: Fast and Accurate Low-Rank Factorization of Compressively-Sensed Data</a><br />
-                Vatsal Sharan*, <strong>Kai Sheng Tai*</strong>, Peter Bailis, and Gregory Valiant<br />
-                <em>* Equal contribution</em><br />
-                ICML 2019<br />
-                <a href="https://github.com/kaishengtai/compressed-factorization" target="_blank">[code]</a>
-              </p>
-
-              <p>
-                <a href="https://arxiv.org/abs/1803.01969" target="_blank">Moment-Based Quantile Sketches for Efficient High Cardinality Aggregation Queries</a><br />
-                Edward Gan, Jialin Ding, <strong>Kai Sheng Tai</strong>, Vatsal Sharan, and Peter Bailis<br />
-                VLDB 2018<br />
-                <a href="https://github.com/stanford-futuredata/msketch" target="_blank">[code]</a>
-              </p>
-
-              <p>
-                <a href="https://dl.acm.org/citation.cfm?id=3196930" target="_blank">Sketching Linear Classifiers over Data Streams</a><br />
-                <strong>Kai Sheng Tai</strong>, Vatsal Sharan, Peter Bailis, and Gregory Valiant<br />
-                SIGMOD 2018<br />
-                <a href="https://github.com/stanford-futuredata/wmsketch" target="_blank">[code]</a>
-                <a href="http://www.sysml.cc/doc/205.pdf" target="_blank">[extended abstract]</a>
-                <a href="https://arxiv.org/abs/1711.02305" target="_blank">[long version]</a>
-                <a href="/static/slides/wmsketch-sigmod2018.pdf" target="_blank">[slides]</a>
-              </p>
-
-              <p>
-                <a href="//www.aclweb.org/anthology/P/P15/P15-1150.pdf" target="_blank">Improved Semantic Representations From Tree-Structured Long Short-Term Memory Networks</a><br />
-                <strong>Kai Sheng Tai</strong>, Richard Socher, and Christopher D. Manning<br />
-                ACL 2015<br />
-  	            <a href="https://github.com/stanfordnlp/treelstm" target="_blank">[code]</a>
-                <a href="/static/slides/treelstm-acl2015.pdf" target="_blank">[slides]</a>
-                <br />
-              </p>
+              <div class="pub-panel" id="mobilellm-pro-abs" hidden>
+                <p>Efficient on-device language models around 1 billion parameters are essential for powering low-latency AI applications on mobile and wearable devices. However, achieving strong performance in this model class, while supporting long context windows and practical deployment remains a significant challenge. We introduce MobileLLM-Pro, a 1-billion-parameter language model optimized for on-device deployment. MobileLLM-Pro achieves state-of-the-art results across 11 standard benchmarks, significantly outperforming both Gemma 3-1B and Llama 3.2-1B, while supporting context windows of up to 128,000 tokens and showing only minor performance regressions at 4-bit quantization. These improvements are enabled by four core innovations: (1) implicit positional distillation, a novel technique that effectively instills long-context capabilities through knowledge distillation; (2) a specialist model merging framework that fuses multiple domain experts into a compact model without parameter growth; (3) simulation-driven data mixing using utility estimation; and (4) 4-bit quantization-aware training with self-distillation. We release our model weights and code to support future research in efficient on-device language models.</p>
+              </div>
+              <div class="pub-panel pub-bib" id="mobilellm-pro-bib" hidden>
+                <button type="button" class="copy">Copy</button>
+                <pre>@article{huber2025mobilellmpro,
+  title   = {{MobileLLM-Pro} Technical Report},
+  author  = {Huber, Patrick and Chang, Ernie and Wen, Wei and Fedorov, Igor and Elgamal, Tarek and Huang, Hanxian and Suda, Naveen and Sankar, Chinnadhurai and Vogeti, Vish and Wang, Yanghan and Gladkov, Alex and Tai, Kai Sheng and Elogeel, Abdelrahman and Hefny, Tarek and Chandra, Vikas and Aly, Ahmed and Kumar, Anuj and Krishnamoorthi, Raghuraman and Sagar, Adithya},
+  journal = {arXiv preprint arXiv:2511.06719},
+  year    = {2025}
+}</pre>
+              </div>
             </div>
-
-            <div class="info-panel">
-              <h3>Open Source Projects</h3>
-
-              <p><a href="https://huggingface.co/facebook/MobileLLM-Pro" target="_blank">MobileLLM-Pro (2025)</a>: A 1B parameter LLM developed at Meta for efficient on-device inference.</p>
-
-              <p><a href="https://github.com/stanford-futuredata/index-baselines" target="_blank">index-baselines (2017)</a>: A library for comparing learned index structures to classical data structures like cuckoo hash tables.</p>
-
-              <p><a href="//github.com/kaishengtai/neuralart" target="_blank">neuralart (2016)</a>: An early reimplementation of the paper <a href="//arxiv.org/abs/1508.06576" target="_blank">'A Neural Algorithm of Artistic Style'</a> by Gatys et al.</p>
-
-              <p><a href="//github.com/kaishengtai/torch-ntm" target="_blank">torch-ntm (2015)</a>: A <a href="//arxiv.org/abs/1410.5401" target="_blank">Neural Turing Machine</a> implementation using LuaTorch.</a></p>
+          </li>
+          <li class="pub" id="ucap">
+            <a class="pub-thumb" href="https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/09508.pdf" tabindex="-1" aria-hidden="true">
+              <img src="static/thumbs/ucap.webp" alt="Diagram of class descriptions aligned to downstream image distributions with learned prompts" loading="lazy" decoding="async">
+            </a>
+            <div class="pub-body">
+              <h3 class="pub-title"><a href="https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/09508.pdf">uCAP: An Unsupervised Prompting Method for Vision-Language Models</a></h3>
+              <p class="pub-authors">A. Tuan Nguyen, <strong>Kai Sheng Tai</strong>, Sirius Chen, Satya Narayan Shukla, Hanchao Yu, Philip Torr, Taipeng Tian, and Ser-Nam Lim</p>
+              <p class="pub-venue">ECCV 2024 (oral)</p>
+              <p class="pub-links">
+                <button type="button" class="toggle" aria-expanded="false" aria-controls="ucap-abs">abstract</button>
+                <button type="button" class="toggle" aria-expanded="false" aria-controls="ucap-bib">bibtex</button>
+              </p>
+              <div class="pub-panel" id="ucap-abs" hidden>
+                <p>This paper addresses a significant limitation that prevents Contrastive Language-Image Pretrained Models (CLIP) from achieving optimal performance on downstream image classification tasks. The key problem with CLIP-style zero-shot classification is that it requires domain-specific context in the form of prompts to better align the class descriptions to the downstream data distribution. In particular, prompts for vision-language models are domain-level texts (e.g., “a centered satellite image of ...”) which, together with the class names, are fed into the text encoder to provide more context for the downstream dataset. These prompts are typically manually tuned, which is time consuming and often sub-optimal. To overcome this bottleneck, this paper proposes uCAP, a method to automatically learn domain-specific prompts/contexts using only unlabeled in-domain images. We achieve this by modeling the generation of images given the class names and a domain-specific prompt with an unsupervised likelihood distribution, and then performing inference of the prompts. We validate the proposed method across various models and datasets, showing that uCAP consistently outperforms manually tuned prompts and related baselines on the evaluated datasets: ImageNet, CIFAR-10, CIFAR-100, OxfordPets (up to 2%), SUN397 (up to 5%), and Caltech101 (up to 3%).</p>
+              </div>
+              <div class="pub-panel pub-bib" id="ucap-bib" hidden>
+                <button type="button" class="copy">Copy</button>
+                <pre>@inproceedings{nguyen2024ucap,
+  title     = {{uCAP}: An Unsupervised Prompting Method for Vision-Language Models},
+  author    = {Nguyen, A. Tuan and Tai, Kai Sheng and Chen, Bor-Chun and Shukla, Satya Narayan and Yu, Hanchao and Torr, Philip and Tian, Tai-Peng and Lim, Ser-Nam},
+  booktitle = {European Conference on Computer Vision (ECCV)},
+  year      = {2024}
+}</pre>
+              </div>
             </div>
-          </div>
-        </div> <!-- right col -->
-      </div>
+          </li>
+          <li class="pub" id="spartan">
+            <a class="pub-thumb" href="https://arxiv.org/abs/2205.14107" tabindex="-1" aria-hidden="true">
+              <img src="static/thumbs/spartan.webp" alt="Plots of soft top-k masks sharpening as the temperature parameter increases" loading="lazy" decoding="async">
+            </a>
+            <div class="pub-body">
+              <h3 class="pub-title"><a href="https://arxiv.org/abs/2205.14107">Spartan: Differentiable Sparsity via Regularized Transportation</a></h3>
+              <p class="pub-authors"><strong>Kai Sheng Tai</strong>, Taipeng Tian, and Ser-Nam Lim</p>
+              <p class="pub-venue">NeurIPS 2022</p>
+              <p class="pub-links">
+                <button type="button" class="toggle" aria-expanded="false" aria-controls="spartan-abs">abstract</button>
+                <button type="button" class="toggle" aria-expanded="false" aria-controls="spartan-bib">bibtex</button>
+                <a href="https://github.com/facebookresearch/spartan">code</a>
+              </p>
+              <div class="pub-panel" id="spartan-abs" hidden>
+                <p>We present Spartan, a method for training sparse neural network models with a predetermined level of sparsity. Spartan is based on a combination of two techniques: (1) soft top-k masking of low-magnitude parameters via a regularized optimal transportation problem and (2) dual averaging-based parameter updates with hard sparsification in the forward pass. This scheme realizes an exploration-exploitation tradeoff: early in training, the learner is able to explore various sparsity patterns, and as the soft top-k approximation is gradually sharpened over the course of training, the balance shifts towards parameter optimization with respect to a fixed sparsity mask. Spartan is sufficiently flexible to accommodate a variety of sparsity allocation policies, including both unstructured and block structured sparsity, as well as general cost-sensitive sparsity allocation mediated by linear models of per-parameter costs. On ImageNet-1K classification, Spartan yields 95% sparse ResNet-50 models and 90% block sparse ViT-B/16 models while incurring absolute top-1 accuracy losses of less than 1% compared to fully dense training.</p>
+              </div>
+              <div class="pub-panel pub-bib" id="spartan-bib" hidden>
+                <button type="button" class="copy">Copy</button>
+                <pre>@inproceedings{tai2022spartan,
+  title     = {Spartan: Differentiable Sparsity via Regularized Transportation},
+  author    = {Tai, Kai Sheng and Tian, Taipeng and Lim, Ser-Nam},
+  booktitle = {Advances in Neural Information Processing Systems},
+  year      = {2022}
+}</pre>
+              </div>
+            </div>
+          </li>
+          <li class="pub" id="eqnet">
+            <a class="pub-thumb" href="https://arxiv.org/abs/2109.09911" tabindex="-1" aria-hidden="true">
+              <img src="static/thumbs/eqnet.webp" alt="Architecture diagram of the EQNet earthquake detection model" loading="lazy" decoding="async">
+            </a>
+            <div class="pub-body">
+              <h3 class="pub-title"><a href="https://arxiv.org/abs/2109.09911">An End-to-End Earthquake Monitoring Method for Joint Earthquake Detection and Association using Deep Learning</a></h3>
+              <p class="pub-authors">Weiqiang Zhu*, <strong>Kai Sheng Tai*</strong>, S. Mostafa Mousavi, Peter Bailis, and Gregory C. Beroza</p>
+              <p class="pub-note">* Equal contribution</p>
+              <p class="pub-venue">Journal of Geophysical Research: Solid Earth, 2022</p>
+              <p class="pub-links">
+                <button type="button" class="toggle" aria-expanded="false" aria-controls="eqnet-abs">abstract</button>
+                <button type="button" class="toggle" aria-expanded="false" aria-controls="eqnet-bib">bibtex</button>
+              </p>
+              <div class="pub-panel" id="eqnet-abs" hidden>
+                <p>Earthquake monitoring by seismic networks typically involves a workflow consisting of phase detection/picking, association, and location tasks. In recent years, the accuracy of these individual stages has been improved through the use of machine learning techniques. In this study, we introduce a new, end-to-end approach that improves overall earthquake detection accuracy by jointly optimizing each stage of the detection pipeline. We propose a neural network architecture for the task of multi-station processing of seismic waveforms recorded over a seismic network. This end-to-end architecture consists of three sub-networks: a backbone network that extracts features from raw waveforms, a phase picking sub-network that picks P- and S-wave arrivals based on these features, and an event detection sub-network that aggregates the features from multiple stations and detects earthquakes. We use these sub-networks in conjunction with a shift-and-stack module based on back-projection that introduces kinematic constraints on arrival times, allowing the model to generalize to different velocity models and to variable station geometry in seismic networks. We evaluate our proposed method on the STanford EArthquake Dataset (STEAD) and on the 2019 Ridgecrest, CA earthquake sequence. The results demonstrate that our end-to-end approach can effectively pick P- and S-wave arrivals and achieve earthquake detection accuracy rivaling that of other state-of-the-art approaches.</p>
+              </div>
+              <div class="pub-panel pub-bib" id="eqnet-bib" hidden>
+                <button type="button" class="copy">Copy</button>
+                <pre>@article{zhu2022endtoend,
+  title   = {An End-to-End Earthquake Detection Method for Joint Phase Picking and Association Using Deep Learning},
+  author  = {Zhu, Weiqiang and Tai, Kai Sheng and Mousavi, S. Mostafa and Bailis, Peter and Beroza, Gregory C.},
+  journal = {Journal of Geophysical Research: Solid Earth},
+  volume  = {127},
+  number  = {3},
+  pages   = {e2021JB023283},
+  year    = {2022},
+  doi     = {10.1029/2021JB023283}
+}</pre>
+              </div>
+            </div>
+          </li>
+          <li class="pub" id="sla">
+            <a class="pub-thumb" href="https://arxiv.org/abs/2102.08622" tabindex="-1" aria-hidden="true">
+              <img src="static/thumbs/sla.webp" alt="Schematic of a label cost matrix refined by Sinkhorn iteration into label assignments" loading="lazy" decoding="async">
+            </a>
+            <div class="pub-body">
+              <h3 class="pub-title"><a href="https://arxiv.org/abs/2102.08622">Sinkhorn Label Allocation: Semi-Supervised Classification via Annealed Self-Training</a></h3>
+              <p class="pub-authors"><strong>Kai Sheng Tai</strong>, Peter Bailis, and Gregory Valiant</p>
+              <p class="pub-venue">ICML 2021</p>
+              <p class="pub-links">
+                <button type="button" class="toggle" aria-expanded="false" aria-controls="sla-abs">abstract</button>
+                <button type="button" class="toggle" aria-expanded="false" aria-controls="sla-bib">bibtex</button>
+                <a href="https://github.com/stanford-futuredata/sinkhorn-label-allocation">code</a>
+              </p>
+              <div class="pub-panel" id="sla-abs" hidden>
+                <p>Self-training is a standard approach to semi-supervised learning where the learner&#x27;s own predictions on unlabeled data are used as supervision during training. In this paper, we reinterpret this label assignment process as an optimal transportation problem between examples and classes, wherein the cost of assigning an example to a class is mediated by the current predictions of the classifier. This formulation facilitates a practical annealing strategy for label assignment and allows for the inclusion of prior knowledge on class proportions via flexible upper bound constraints. The solutions to these assignment problems can be efficiently approximated using Sinkhorn iteration, thus enabling their use in the inner loop of standard stochastic optimization algorithms. We demonstrate the effectiveness of our algorithm on the CIFAR-10, CIFAR-100, and SVHN datasets in comparison with FixMatch, a state-of-the-art self-training algorithm. Our code is available at https://github.com/stanford-futuredata/sinkhorn-label-allocation.</p>
+              </div>
+              <div class="pub-panel pub-bib" id="sla-bib" hidden>
+                <button type="button" class="copy">Copy</button>
+                <pre>@inproceedings{tai2021sinkhorn,
+  title     = {Sinkhorn Label Allocation: Semi-Supervised Classification via Annealed Self-Training},
+  author    = {Tai, Kai Sheng and Bailis, Peter and Valiant, Gregory},
+  booktitle = {International Conference on Machine Learning (ICML)},
+  year      = {2021}
+}</pre>
+              </div>
+            </div>
+          </li>
+          <li class="pub" id="etn">
+            <a class="pub-thumb" href="https://arxiv.org/abs/1901.11399" tabindex="-1" aria-hidden="true">
+              <img src="static/thumbs/etn.webp" alt="Grids of canonical coordinate systems for rotation, shear, hyperbolic rotation and perspective" loading="lazy" decoding="async">
+            </a>
+            <div class="pub-body">
+              <h3 class="pub-title"><a href="https://arxiv.org/abs/1901.11399">Equivariant Transformer Networks</a></h3>
+              <p class="pub-authors"><strong>Kai Sheng Tai</strong>, Peter Bailis, and Gregory Valiant</p>
+              <p class="pub-venue">ICML 2019</p>
+              <p class="pub-links">
+                <button type="button" class="toggle" aria-expanded="false" aria-controls="etn-abs">abstract</button>
+                <button type="button" class="toggle" aria-expanded="false" aria-controls="etn-bib">bibtex</button>
+                <a href="https://github.com/stanford-futuredata/equivariant-transformers">code</a>
+              </p>
+              <div class="pub-panel" id="etn-abs" hidden>
+                <p>How can prior knowledge on the transformation invariances of a domain be incorporated into the architecture of a neural network? We propose Equivariant Transformers (ETs), a family of differentiable image-to-image mappings that improve the robustness of models towards pre-defined continuous transformation groups. Through the use of specially-derived canonical coordinate systems, ETs incorporate functions that are equivariant by construction with respect to these transformations. We show empirically that ETs can be flexibly composed to improve model robustness towards more complicated transformation groups in several parameters. On a real-world image classification task, ETs improve the sample efficiency of ResNet classifiers, achieving relative improvements in error rate of up to 15% in the limited data regime while increasing model parameter count by less than 1%.</p>
+              </div>
+              <div class="pub-panel pub-bib" id="etn-bib" hidden>
+                <button type="button" class="copy">Copy</button>
+                <pre>@inproceedings{tai2019equivariant,
+  title     = {Equivariant Transformer Networks},
+  author    = {Tai, Kai Sheng and Bailis, Peter and Valiant, Gregory},
+  booktitle = {International Conference on Machine Learning (ICML)},
+  year      = {2019}
+}</pre>
+              </div>
+            </div>
+          </li>
+          <li class="pub" id="compressed-factorization">
+            <a class="pub-thumb" href="https://arxiv.org/abs/1706.08146" tabindex="-1" aria-hidden="true">
+              <img src="static/thumbs/compressed-factorization.webp" alt="Diagram of factorizing a compressed matrix and recovering the original factors" loading="lazy" decoding="async">
+            </a>
+            <div class="pub-body">
+              <h3 class="pub-title"><a href="https://arxiv.org/abs/1706.08146">Compressed Factorization: Fast and Accurate Low-Rank Factorization of Compressively-Sensed Data</a></h3>
+              <p class="pub-authors">Vatsal Sharan*, <strong>Kai Sheng Tai*</strong>, Peter Bailis, and Gregory Valiant</p>
+              <p class="pub-note">* Equal contribution</p>
+              <p class="pub-venue">ICML 2019</p>
+              <p class="pub-links">
+                <button type="button" class="toggle" aria-expanded="false" aria-controls="compressed-factorization-abs">abstract</button>
+                <button type="button" class="toggle" aria-expanded="false" aria-controls="compressed-factorization-bib">bibtex</button>
+                <a href="https://github.com/kaishengtai/compressed-factorization">code</a>
+              </p>
+              <div class="pub-panel" id="compressed-factorization-abs" hidden>
+                <p>What learning algorithms can be run directly on compressively-sensed data? In this work, we consider the question of accurately and efficiently computing low-rank matrix or tensor factorizations given data compressed via random projections. We examine the approach of first performing factorization in the compressed domain, and then reconstructing the original high-dimensional factors from the recovered (compressed) factors. In both the matrix and tensor settings, we establish conditions under which this natural approach will provably recover the original factors. While it is well-known that random projections preserve a number of geometric properties of a dataset, our work can be viewed as showing that they can also preserve certain solutions of non-convex, NP-Hard problems like non-negative matrix factorization. We support these theoretical results with experiments on synthetic data and demonstrate the practical applicability of compressed factorization on real-world gene expression and EEG time series datasets.</p>
+              </div>
+              <div class="pub-panel pub-bib" id="compressed-factorization-bib" hidden>
+                <button type="button" class="copy">Copy</button>
+                <pre>@inproceedings{sharan2019compressed,
+  title     = {Compressed Factorization: Fast and Accurate Low-Rank Factorization of Compressively-Sensed Data},
+  author    = {Sharan, Vatsal and Tai, Kai Sheng and Bailis, Peter and Valiant, Gregory},
+  booktitle = {International Conference on Machine Learning (ICML)},
+  year      = {2019}
+}</pre>
+              </div>
+            </div>
+          </li>
+          <li class="pub" id="msketch">
+            <a class="pub-thumb" href="https://arxiv.org/abs/1803.01969" tabindex="-1" aria-hidden="true">
+              <img src="static/thumbs/msketch.webp" alt="Data cube of mergeable summaries combined by an aggregation query" loading="lazy" decoding="async">
+            </a>
+            <div class="pub-body">
+              <h3 class="pub-title"><a href="https://arxiv.org/abs/1803.01969">Moment-Based Quantile Sketches for Efficient High Cardinality Aggregation Queries</a></h3>
+              <p class="pub-authors">Edward Gan, Jialin Ding, <strong>Kai Sheng Tai</strong>, Vatsal Sharan, and Peter Bailis</p>
+              <p class="pub-venue">VLDB 2018</p>
+              <p class="pub-links">
+                <button type="button" class="toggle" aria-expanded="false" aria-controls="msketch-abs">abstract</button>
+                <button type="button" class="toggle" aria-expanded="false" aria-controls="msketch-bib">bibtex</button>
+                <a href="https://github.com/stanford-futuredata/msketch">code</a>
+              </p>
+              <div class="pub-panel" id="msketch-abs" hidden>
+                <p>Interactive analytics increasingly involves querying for quantiles over sub-populations of high cardinality datasets. Data processing engines such as Druid and Spark use mergeable summaries to estimate quantiles, but summary merge times can be a bottleneck during aggregation. We show how a compact and efficiently mergeable quantile sketch can support aggregation workloads. This data structure, which we refer to as the moments sketch, operates with a small memory footprint (200 bytes) and computationally efficient (50ns) merges by tracking only a set of summary statistics, notably the sample moments. We demonstrate how we can efficiently and practically estimate quantiles using the method of moments and the maximum entropy principle, and show how the use of a cascade further improves query time for threshold predicates. Empirical evaluation on real-world datasets shows that the moments sketch can achieve less than 1 percent error with 15 times less merge overhead than comparable summaries, improving end query time in the MacroBase engine by up to 7 times and the Druid engine by up to 60 times.</p>
+              </div>
+              <div class="pub-panel pub-bib" id="msketch-bib" hidden>
+                <button type="button" class="copy">Copy</button>
+                <pre>@article{gan2018moment,
+  title   = {Moment-Based Quantile Sketches for Efficient High Cardinality Aggregation Queries},
+  author  = {Gan, Edward and Ding, Jialin and Tai, Kai Sheng and Sharan, Vatsal and Bailis, Peter},
+  journal = {Proceedings of the VLDB Endowment},
+  volume  = {11},
+  number  = {11},
+  pages   = {1647--1660},
+  year    = {2018}
+}</pre>
+              </div>
+            </div>
+          </li>
+          <li class="pub" id="wmsketch">
+            <a class="pub-thumb" href="https://dl.acm.org/doi/10.1145/3183713.3196930" tabindex="-1" aria-hidden="true">
+              <img src="static/thumbs/wmsketch.webp" alt="Diagram of a feature hashed into several buckets of a sketch" loading="lazy" decoding="async">
+            </a>
+            <div class="pub-body">
+              <h3 class="pub-title"><a href="https://dl.acm.org/doi/10.1145/3183713.3196930">Sketching Linear Classifiers over Data Streams</a></h3>
+              <p class="pub-authors"><strong>Kai Sheng Tai</strong>, Vatsal Sharan, Peter Bailis, and Gregory Valiant</p>
+              <p class="pub-venue">SIGMOD 2018</p>
+              <p class="pub-links">
+                <button type="button" class="toggle" aria-expanded="false" aria-controls="wmsketch-abs">abstract</button>
+                <button type="button" class="toggle" aria-expanded="false" aria-controls="wmsketch-bib">bibtex</button>
+                <a href="https://github.com/stanford-futuredata/wmsketch">code</a>
+                <a href="https://mlsys.org/Conferences/2019/doc/2018/205.pdf">extended abstract</a>
+                <a href="https://arxiv.org/abs/1711.02305">long version</a>
+                <a href="static/slides/wmsketch-sigmod2018.pdf">slides</a>
+              </p>
+              <div class="pub-panel" id="wmsketch-abs" hidden>
+                <p>We introduce a new sub-linear space sketch---the Weight-Median Sketch---for learning compressed linear classifiers over data streams while supporting the efficient recovery of large-magnitude weights in the model. This enables memory-limited execution of several statistical analyses over streams, including online feature selection, streaming data explanation, relative deltoid detection, and streaming estimation of pointwise mutual information. Unlike related sketches that capture the most frequently-occurring features (or items) in a data stream, the Weight-Median Sketch captures the features that are most discriminative of one stream (or class) compared to another. The Weight-Median Sketch adopts the core data structure used in the Count-Sketch, but, instead of sketching counts, it captures sketched gradient updates to the model parameters. We provide a theoretical analysis that establishes recovery guarantees for batch and online learning, and demonstrate empirical improvements in memory-accuracy trade-offs over alternative memory-budgeted methods, including count-based sketches and feature hashing.</p>
+              </div>
+              <div class="pub-panel pub-bib" id="wmsketch-bib" hidden>
+                <button type="button" class="copy">Copy</button>
+                <pre>@inproceedings{tai2018sketching,
+  title     = {Sketching Linear Classifiers over Data Streams},
+  author    = {Tai, Kai Sheng and Sharan, Vatsal and Bailis, Peter and Valiant, Gregory},
+  booktitle = {Proceedings of the 2018 International Conference on Management of Data (SIGMOD)},
+  pages     = {757--772},
+  year      = {2018},
+  doi       = {10.1145/3183713.3196930}
+}</pre>
+              </div>
+            </div>
+          </li>
+          <li class="pub" id="treelstm">
+            <a class="pub-thumb" href="https://aclanthology.org/P15-1150/" tabindex="-1" aria-hidden="true">
+              <img src="static/thumbs/treelstm.webp" alt="Diagram comparing a chain-structured LSTM with a tree-structured LSTM" loading="lazy" decoding="async">
+            </a>
+            <div class="pub-body">
+              <h3 class="pub-title"><a href="https://aclanthology.org/P15-1150/">Improved Semantic Representations From Tree-Structured Long Short-Term Memory Networks</a></h3>
+              <p class="pub-authors"><strong>Kai Sheng Tai</strong>, Richard Socher, and Christopher D. Manning</p>
+              <p class="pub-venue">ACL 2015</p>
+              <p class="pub-links">
+                <button type="button" class="toggle" aria-expanded="false" aria-controls="treelstm-abs">abstract</button>
+                <button type="button" class="toggle" aria-expanded="false" aria-controls="treelstm-bib">bibtex</button>
+                <a href="https://github.com/stanfordnlp/treelstm">code</a>
+                <a href="static/slides/treelstm-acl2015.pdf">slides</a>
+              </p>
+              <div class="pub-panel" id="treelstm-abs" hidden>
+                <p>Because of their superior ability to preserve sequence information over time, Long Short-Term Memory (LSTM) networks, a type of recurrent neural network with a more complex computational unit, have obtained strong results on a variety of sequence modeling tasks. The only underlying LSTM structure that has been explored so far is a linear chain. However, natural language exhibits syntactic properties that would naturally combine words to phrases. We introduce the Tree-LSTM, a generalization of LSTMs to tree-structured network topologies. Tree-LSTMs outperform all existing systems and strong LSTM baselines on two tasks: predicting the semantic relatedness of two sentences (SemEval 2014, Task 1) and sentiment classification (Stanford Sentiment Treebank).</p>
+              </div>
+              <div class="pub-panel pub-bib" id="treelstm-bib" hidden>
+                <button type="button" class="copy">Copy</button>
+                <pre>@inproceedings{tai2015improved,
+  title     = {Improved Semantic Representations From Tree-Structured Long Short-Term Memory Networks},
+  author    = {Tai, Kai Sheng and Socher, Richard and Manning, Christopher D.},
+  booktitle = {Proceedings of the 53rd Annual Meeting of the Association for Computational Linguistics and the 7th International Joint Conference on Natural Language Processing (Volume 1: Long Papers)},
+  pages     = {1556--1566},
+  year      = {2015},
+  doi       = {10.3115/v1/P15-1150}
+}</pre>
+              </div>
+            </div>
+          </li>
+          </ol>
+        </section>
+
+        <section id="projects">
+          <h2>Open Source Projects</h2>
+          <ul class="projects">
+            <li><a href="https://huggingface.co/facebook/MobileLLM-Pro">MobileLLM-Pro</a> <span class="year">(2025)</span>: A 1B parameter LLM developed at Meta for efficient on-device inference.</li>
+            <li><a href="https://github.com/stanford-futuredata/index-baselines">index-baselines</a> <span class="year">(2017)</span>: A library for comparing learned index structures to classical data structures like cuckoo hash tables.</li>
+            <li><a href="https://github.com/kaishengtai/neuralart">neuralart</a> <span class="year">(2016)</span>: An early reimplementation of the paper <a href="https://arxiv.org/abs/1508.06576">&lsquo;A Neural Algorithm of Artistic Style&rsquo;</a> by Gatys et al.</li>
+            <li><a href="https://github.com/kaishengtai/torch-ntm">torch-ntm</a> <span class="year">(2015)</span>: A <a href="https://arxiv.org/abs/1410.5401">Neural Turing Machine</a> implementation using LuaTorch.</li>
+          </ul>
+        </section>
+      </main>
     </div>
 
-    <script src="js/bootstrap.min.js"></script>
+    <script>
+      document.addEventListener('click', function (e) {
+        var btn = e.target.closest('button');
+        if (!btn) return;
+        if (btn.classList.contains('toggle')) {
+          var open = btn.getAttribute('aria-expanded') === 'true';
+          // Only one panel per paper is open at a time.
+          btn.parentElement.querySelectorAll('.toggle').forEach(function (b) {
+            b.setAttribute('aria-expanded', 'false');
+            document.getElementById(b.getAttribute('aria-controls')).hidden = true;
+          });
+          if (!open) {
+            btn.setAttribute('aria-expanded', 'true');
+            document.getElementById(btn.getAttribute('aria-controls')).hidden = false;
+          }
+        } else if (btn.classList.contains('copy')) {
+          var text = btn.nextElementSibling.textContent;
+          navigator.clipboard.writeText(text).then(function () {
+            btn.textContent = 'Copied';
+            setTimeout(function () { btn.textContent = 'Copy'; }, 1500);
+          });
+        }
+      });
+    </script>
   </body>
 </html>
